@@ -2,21 +2,31 @@
  .  *  move your mouse to over the stars   .
  *  .  .   change these values:   .  *
    .      * .        .          * .       */
-   function onPageLoad()
-   {
-    const myModal = document.getElementById('myModal')
-const myInput = document.getElementById('myInput')
+function onPageLoad() {
+  const myModal = document.getElementById('myModal')
+  const myInput = document.getElementById('myInput')
 
-myModal.addEventListener('shown.bs.modal', () => {
-  myInput.focus()
-});
+  myModal.addEventListener('shown.bs.modal', () => {
+    myInput.focus()
+  });
 
-   };
-   /*!
- * Particleground
- *
- */
- document.addEventListener('DOMContentLoaded', function () {
+};
+/* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function () {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("navbar").style.top = "0";
+  } else {
+    document.getElementById("navbar").style.top = "-50px";
+  }
+  prevScrollpos = currentScrollPos;
+}
+/*!
+* Particleground
+*
+*/
+document.addEventListener('DOMContentLoaded', function () {
   particleground(document.getElementById('particles'), {
     dotColor: '#5cbdaa',
     lineColor: '#5cbdaa'
@@ -27,7 +37,7 @@ myModal.addEventListener('shown.bs.modal', () => {
 
 
 
-;(function(window, document) {
+; (function (window, document) {
   "use strict";
   var pluginName = 'particleground';
 
@@ -92,11 +102,11 @@ myModal.addEventListener('shown.bs.modal', () => {
         particles.push(p);
       };
 
-      window.addEventListener('resize', function() {
+      window.addEventListener('resize', function () {
         resizeHandler();
       }, false);
 
-      document.addEventListener('mousemove', function(e) {
+      document.addEventListener('mousemove', function (e) {
         mouseX = e.pageX;
         mouseY = e.pageY;
       }, false);
@@ -245,7 +255,7 @@ myModal.addEventListener('shown.bs.modal', () => {
     /**
      * Draw particle
      */
-    Particle.prototype.draw = function() {
+    Particle.prototype.draw = function () {
       // Draw circle
       ctx.beginPath();
       ctx.arc(this.position.x + this.parallaxOffsetX, this.position.y + this.parallaxOffsetY, options.particleRadius / 2, 0, Math.PI * 2, true);
@@ -280,7 +290,7 @@ myModal.addEventListener('shown.bs.modal', () => {
     /**
      * update particle position
      */
-    Particle.prototype.updatePosition = function() {
+    Particle.prototype.updatePosition = function () {
       if (options.parallax) {
         if (orientationSupport && !desktop) {
           // Map tiltX range [-30,30] to range [0,winW]
@@ -349,11 +359,11 @@ myModal.addEventListener('shown.bs.modal', () => {
     /**
      * Setter: particle stacking position
      */
-    Particle.prototype.setStackPos = function(i) {
+    Particle.prototype.setStackPos = function (i) {
       this.stackPos = i;
     }
 
-    function option (key, val) {
+    function option(key, val) {
       if (val) {
         options[key] = val;
       } else {
@@ -386,7 +396,7 @@ myModal.addEventListener('shown.bs.modal', () => {
     };
   }
 
-  window[pluginName] = function(elem, options) {
+  window[pluginName] = function (elem, options) {
     return new Plugin(elem, options);
   };
 
@@ -406,29 +416,29 @@ myModal.addEventListener('shown.bs.modal', () => {
     proximity: 100, // How close two dots need to be before they join
     parallax: true,
     parallaxMultiplier: 5, // The lower the number, the more extreme the parallax effect
-    onInit: function() {},
-    onDestroy: function() {}
+    onInit: function () { },
+    onDestroy: function () { }
   };
 
   // nothing wrong with hooking into jQuery if it's there...
   if ($) {
-    $.fn[pluginName] = function(options) {
+    $.fn[pluginName] = function (options) {
       if (typeof arguments[0] === 'string') {
         var methodName = arguments[0];
         var args = Array.prototype.slice.call(arguments, 1);
         var returnVal;
-        this.each(function() {
+        this.each(function () {
           if ($.data(this, 'plugin_' + pluginName) && typeof $.data(this, 'plugin_' + pluginName)[methodName] === 'function') {
             returnVal = $.data(this, 'plugin_' + pluginName)[methodName].apply(this, args);
           }
         });
-        if (returnVal !== undefined){
+        if (returnVal !== undefined) {
           return returnVal;
         } else {
           return this;
         }
       } else if (typeof options === "object" || !options) {
-        return this.each(function() {
+        return this.each(function () {
           if (!$.data(this, 'plugin_' + pluginName)) {
             $.data(this, 'plugin_' + pluginName, new Plugin(this, options));
           }
@@ -439,27 +449,27 @@ myModal.addEventListener('shown.bs.modal', () => {
 
 })(window, document);
 
-(function() {
-    var lastTime = 0;
-    var vendors = ['ms', 'moz', 'webkit', 'o'];
-    for(var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
-      window.requestAnimationFrame = window[vendors[x]+'RequestAnimationFrame'];
-      window.cancelAnimationFrame = window[vendors[x]+'CancelAnimationFrame']
-                                 || window[vendors[x]+'CancelRequestAnimationFrame'];
-    }
+(function () {
+  var lastTime = 0;
+  var vendors = ['ms', 'moz', 'webkit', 'o'];
+  for (var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
+    window.requestAnimationFrame = window[vendors[x] + 'RequestAnimationFrame'];
+    window.cancelAnimationFrame = window[vendors[x] + 'CancelAnimationFrame']
+      || window[vendors[x] + 'CancelRequestAnimationFrame'];
+  }
 
-    if (!window.requestAnimationFrame)
-      window.requestAnimationFrame = function(callback, element) {
-        var currTime = new Date().getTime();
-        var timeToCall = Math.max(0, 16 - (currTime - lastTime));
-        var id = window.setTimeout(function() { callback(currTime + timeToCall); },
-          timeToCall);
-        lastTime = currTime + timeToCall;
-        return id;
-      };
+  if (!window.requestAnimationFrame)
+    window.requestAnimationFrame = function (callback, element) {
+      var currTime = new Date().getTime();
+      var timeToCall = Math.max(0, 16 - (currTime - lastTime));
+      var id = window.setTimeout(function () { callback(currTime + timeToCall); },
+        timeToCall);
+      lastTime = currTime + timeToCall;
+      return id;
+    };
 
-    if (!window.cancelAnimationFrame)
-      window.cancelAnimationFrame = function(id) {
-        clearTimeout(id);
-      };
+  if (!window.cancelAnimationFrame)
+    window.cancelAnimationFrame = function (id) {
+      clearTimeout(id);
+    };
 }());
