@@ -2,26 +2,26 @@
  .  *  move your mouse to over the stars   .
  *  .  .   change these values:   .  *
    .      * .        .          * .       */
-function onPageLoad() {
-  const myModal = document.getElementById('myModal')
-  const myInput = document.getElementById('myInput')
+// function onPageLoad() {
+//   const myModal = document.getElementById('myModal')
+//   const myInput = document.getElementById('myInput')
 
-  myModal.addEventListener('shown.bs.modal', () => {
-    myInput.focus()
-  });
+//   myModal.addEventListener('shown.bs.modal', () => {
+//     myInput.focus()
+//   });
 
-};
+// };
 /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
-var prevScrollpos = window.pageYOffset;
-window.onscroll = function () {
-  var currentScrollPos = window.pageYOffset;
-  if (prevScrollpos > currentScrollPos) {
-    document.getElementById("navbar").style.top = "0";
-  } else {
-    document.getElementById("navbar").style.top = "-50px";
-  }
-  prevScrollpos = currentScrollPos;
-}
+// var prevScrollpos = window.pageYOffset;
+// window.onscroll = function () {
+//   var currentScrollPos = window.pageYOffset;
+//   if (prevScrollpos > currentScrollPos) {
+//     document.getElementById("navbar").style.top = "0";
+//   } else {
+//     document.getElementById("navbar").style.top = "-50px";
+//   }
+//   prevScrollpos = currentScrollPos;
+// }
 /*!
 * Particleground
 *
