@@ -418,7 +418,7 @@ textarea {
   } */
 }
 
-@media (min-width: 992px) {
+@media (min-width: 900px) {
   #navbar .navbar-shrink {
     padding-top: 0;
     padding-bottom: 0;
