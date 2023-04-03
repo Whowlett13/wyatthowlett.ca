@@ -132,6 +132,15 @@ textarea {
   background: #fff !important;
 }
 
+.navBarLinks {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  float: inline-end !important;
+
+}
+
+
 .heading-sec__main::after {
   content: '';
   position: absolute;
@@ -163,19 +172,25 @@ textarea {
 
 @media (min-width: 992px) {
   #navbar {
-    padding-top: 25px;
-    padding-bottom: 25px;
+    /* padding-top: 5px;
+    padding-bottom: 5px; */
     transition: padding-top 0.3s, padding-bottom 0.3s;
     border: none;
-    background-color: transparent;
+    background-color: #001f30;
   }
 
   #navbar .navbar-brand {
     font-size: 1.75em;
     transition: all 0.3s;
   }
+
   #navbar .navbar-nav .nav-item .nav-link {
     padding-left: 20px;
+    background-color: #212529 !important; /* Black background color */
+    position: fixed !important; /* Make it stick/fixed */
+    top: 0; /* Stay on top */
+    width: 100%; /* Full width */
+    transition: top 0.3s; /* Transition effect when sliding down (and up) */
   }
 
   #navbar.navbar-shrink {
@@ -299,11 +314,13 @@ textarea {
   }
 }
 
-/* @media only screen and (max-width: 600px){ 
+@media only screen and (max-width: 600px){ 
   .home-hero__cta {
+
+
     
   }
-} */
+}
 
 .home-hero__socials {
   position: absolute;
@@ -380,7 +397,7 @@ textarea {
 }
 
 .home-hero__cta {
-  margin-top: 5rem;
+  margin-top: 10px;
   text-align: center;
 }
 
@@ -767,15 +784,14 @@ textarea {
   position: fixed;
   width: 100%;
   z-index: 1000;
-  background: #000;
+  background: #001f30;
   background: #a03a03 box-shadow: 0 10px 100px rgba(0, 0, 0, 0.1);
 }
 
 .header__content {
   display: flex;
-  justify-content: end;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
   padding: 1rem 5rem;
 }
 
