@@ -4,12 +4,12 @@
 
 
 ## Table Of Contents:
--Description Of Functionality
--Link to Deployed Application
--ScreenShot of Deployed Application
--Built With
--License
--Creator
+- Description Of Functionality
+- Link to Deployed Application
+- ScreenShot of Deployed Application
+- Built With
+- License
+- Creator
 
 ## Description Of Functionality:
 
@@ -24,11 +24,11 @@ link:  https://whowlett13.github.io/Wyatt-Howlett-Portfolio.github.io/
 Link: 
 
 ## Built With:
--HTML
--CSS
--Javascript
--Jquery
--Bootstrap
+- HTML
+- CSS
+- Javascript
+- Jquery
+- Bootstrap
 
 
 ## license:
