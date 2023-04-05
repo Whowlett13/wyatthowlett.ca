@@ -134,8 +134,11 @@ textarea {
 
 .navBarLinks {
   display: flex;
-  justify-content: end;
+  justify-content: space-between;
+  
   align-items: center;
+  
+  /* margin-left: 60%; */
   float: inline-end !important;
 
 }
@@ -792,6 +795,7 @@ textarea {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 30px;
   padding: 1rem 5rem;
 }
 
