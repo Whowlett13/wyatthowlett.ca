@@ -135,7 +135,7 @@ textarea {
 .navBarLinks {
   display: flex;
   justify-content: space-between;
-  
+  gap: 50px;
   align-items: center;
   
   /* margin-left: 60%; */
@@ -239,6 +239,7 @@ textarea {
   display: inline-block;
   font-weight: 700;
   border-radius: 5px;
+  padding-bottom: 10px;
   box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
   transition: transform .3s;
 }
@@ -282,7 +283,8 @@ textarea {
 
 .text-primary {
   color: #fff !important;
-  font-size: 2.2rem;
+  font-size: 4.3rem;
+
   text-align: center;
   width: 100%;
   line-height: 1.6;
@@ -407,11 +409,10 @@ textarea {
 .about {
   background: #fafafa;
 }
-
-.about__content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 10rem;
+.profilePhoto {
+ display: flex;
+ border-radius: 20%;
+ margin-right: 0px;
 }
 
 @media only screen and (max-width: 56.25em) {
@@ -432,10 +433,10 @@ textarea {
     font-size: 2.4rem;
   }
 
-  /* #particles canvas {
-    height: 550px !important;
+  #particles canvas {
+    height: 300px !important;
 
-  } */
+  }
 }
 
 @media (min-width: 900px) {
@@ -795,7 +796,7 @@ textarea {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 30px;
+  gap: 0px 0px 0px 50px !important;
   padding: 1rem 5rem;
 }
 
