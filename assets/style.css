@@ -449,9 +449,9 @@ textarea {
 
 .about__content-details-para {
   font-size: 1.8rem;
-  color: grey;
+  color: black;
   max-width: 60rem;
-  line-height: 1.7;
+  line-height: 2;
   margin-bottom: 1rem;
 }
 
@@ -795,8 +795,7 @@ textarea {
 .header__content {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 0px 0px 0px 50px !important;
+  justify-content: space-around;
   padding: 1rem 5rem;
 }
 
