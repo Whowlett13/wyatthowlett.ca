@@ -11,21 +11,21 @@
 //   });
 
 // };
-/* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
-// var prevScrollpos = window.pageYOffset;
-// window.onscroll = function () {
-//   var currentScrollPos = window.pageYOffset;
-//   if (prevScrollpos > currentScrollPos) {
-//     document.getElementById("navbar").style.top = "0";
-//   } else {
-//     document.getElementById("navbar").style.top = "-50px";
-//   }
-//   prevScrollpos = currentScrollPos;
-// }
-/*!
-* Particleground
-*
-*/
+//When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function () {
+var currentScrollPos = window.pageYOffset;
+if (prevScrollpos > currentScrollPos) {
+ document.getElementById("navbar").style.top = "0";
+} else {
+  document.getElementById("navbar").style.top = "-1rem";
+}
+prevScrollpos = currentScrollPos;
+}
+
+//* Particleground
+//*
+//*/
 document.addEventListener('DOMContentLoaded', function () {
   particleground(document.getElementById('particles'), {
     dotColor: '#5cbdaa',
