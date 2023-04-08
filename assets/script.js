@@ -9,9 +9,27 @@
 //   myModal.addEventListener('shown.bs.modal', () => {
 //     myInput.focus()
 //   });
+const menuBtn = document.querySelector('.menuBtn');
+let menuOpen = false;
+menuBtn.addEventListener('click', () => {
+  if(!menuOpen){
+    menuBtn.classList.add('open');
+  menuOpen = true;
+  } else{
+    menuBtn.classList.remove('open');
+    menuOpen = false;
+  }
+
+
+
+})
+
+
+
 
 // };
 //When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
+
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function () {
 var currentScrollPos = window.pageYOffset;
