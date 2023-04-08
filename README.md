@@ -16,12 +16,12 @@
 
 ## link To Deployed Application:
 
-link:  https://whowlett13.github.io/Wyatt-Howlett-Portfolio.github.io/
+Link:  https://whowlett13.github.io/Wyatt-Howlett-Portfolio.github.io/
 
 
 ## ScreenShot of Deployed Application:
 
-Link: 
+Link: ![Screenshot (51)](https://user-images.githubusercontent.com/116604140/230736576-38130f85-6af7-4808-8711-397d3ae3e58b.png)
 
 ## Built With:
 - HTML
