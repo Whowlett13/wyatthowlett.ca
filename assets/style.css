@@ -97,8 +97,9 @@ textarea {
 }
 
 @media only screen and (max-width: 56.25em) {
-  .heading-sec__mb-bg {
+  .heading-sec__mb-bg #particles {
     margin-bottom: 8rem;
+
   }
 }
 
@@ -107,7 +108,7 @@ textarea {
 }
 
 @media only screen and (max-width: 56.25em) {
-  .heading-sec__mb-med {
+  .heading-sec__mb-med #particles {
     margin-bottom: 8rem;
   }
 }
@@ -312,9 +313,19 @@ padding-bottom: 5px;
   max-height: 120rem;
   position: relative;
 }
+.pg-canvas {
+  background: #001f30;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+  min-height: 80rem;
+  max-height: 120rem;
+  position: relative;
 
+
+}
 @media only screen and (max-width: 37.5em) {
-  .home-hero {
+  .home-hero .pg-canvas{
     height: unset;
     min-height: unset;
 
