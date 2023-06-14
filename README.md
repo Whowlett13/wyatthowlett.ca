@@ -14,7 +14,7 @@
 ## Description Of Functionality:
 
 
-## link To Deployed Application:
+## Link To Deployed Application:
 
 Link:  https://whowlett13.github.io/Wyatt-Howlett-Portfolio.github.io/
 
