@@ -570,4 +570,9 @@ document.addEventListener(
     window.cancelAnimationFrame = function (id) {
       clearTimeout(id);
     };
+
+
+    // wyattHowlett => (res, req){
+    //   addEventListener(#about)=> onclick(render #about)
+    // };
 })();
