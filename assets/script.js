@@ -20,6 +20,17 @@ menuBtn.addEventListener("click", () => {
     menuOpen = false;
   }
 });
+const img = {
+  "dylan": "assets/images/dylan.jpg",
+}
+const dylan = document.querySelector(".dylan");
+function renderImage() {
+let getImgs = "";
+for (let i = 0; i < img.length; i++) {
+  getImgs += `<img src="${img[i]}" alt="dylan" class="dylan">`;
+}
+}
+renderImage();
 
 // };
 //When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
